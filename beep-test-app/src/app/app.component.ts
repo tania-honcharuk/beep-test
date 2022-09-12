@@ -127,7 +127,12 @@ export class AppComponent {
       obj.models.push(data);
     }
 
-    if (obj.models.length >= 0) {
+    if (obj.models.length > 0) {
+      return console.log(arr);
+    } else if (obj.models.length === 0) {
+      obj = {
+        name: main,
+      }
       return console.log(arr);
     }
   }
