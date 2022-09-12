@@ -1,0 +1,14 @@
+<div class="list">
+  <div *ngFor="let item of fullList" class="card">
+      {{item.name}}
+      <div *ngFor="let model of item.models" class="card-item">
+      <input
+        [checked]="true"
+        type="checkbox"
+        (change)="checkValue($event, item.name, { name: model.name })"
+        [value]="{ name: model.name }"
+      />
+      <label> {{ model.name }}</label>
+    </div>
+  </div>
+</div>
